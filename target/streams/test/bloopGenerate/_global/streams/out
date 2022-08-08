@@ -1,0 +1,4 @@
+[debug] [chisel-template-test] Classpath dependencies List()
+[debug] [chisel-template-test] Dependencies from configurations List(chisel-template)
+[debug] Bloop wrote the configuration of project 'chisel-template-test' to '/Users/parkdongho/Documents/dev/chisel-template/.bloop/chisel-template-test.json'
+[success] Generated .bloop/chisel-template-test.json

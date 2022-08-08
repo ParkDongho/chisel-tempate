@@ -43,7 +43,7 @@ Clean:
 ########
 # Drawio
 Drawio:
-	make DrawioExport
+	cd util && $(SOURCE) ./drawio.sh
 DrawioNew:
 	@read -p "Enter File Name:" file_name; \
 	cp ./blank.drawio ./diagram/$$file_name.drawio \
