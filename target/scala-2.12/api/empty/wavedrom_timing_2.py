@@ -5,8 +5,6 @@ svg = wavedrom.render("""
  { "name": "CMD",  "wave": "x.3x=x4x=x=x=x=x", "data": "RAS NOP CAS NOP NOP NOP NOP", "phase": 0.5 },
  { "name": "ADDR", "wave": "x.=x..=x........", "data": "ROW COL",                     "phase": 0.5 },
  { "name": "DQS",  "wave": "z.......0.1010z." },
- { "name": "DQS",  "wave": "z.......0.1010z." },
- { "name": "DQ",   "wave": "z.........5555z.", "data": "D0 D1 D2 D3" },
  { "name": "DQ",   "wave": "z.........5555z.", "data": "D0 D1 D2 D3" }
 ]}""")
-svg.saveas("./timing_diagram_foo.svg")
+svg.saveas("demo2.svg")

@@ -43,26 +43,30 @@ Clean:
 ########
 # Drawio
 Drawio:
-	cd util && $(SOURCE) ./drawio.sh
+	cd util \
+		&& $(SOURCE) ./drawio.sh \
+
 DrawioNew:
 	@read -p "Enter File Name:" file_name; \
 	cp ./blank.drawio ./diagram/$$file_name.drawio \
 	&& open ./diagram/$$file_name.drawio
-DrawioExport:
-	/Applications/draw.io.app/Contents/MacOS/draw.io \
-		-x -f svg -o target/scala-2.12/api/empty src/main/doc-resources/empty
 
 ########
 # Wavedrom
 Wavedrom:
-	cd ./util \
-	&& $(SOURCE) ./wavedrom.sh
+	cd util \
+		&& $(SOURCE) ./wavedrom.sh \
 
-#################
+##########
 # ScalaDoc
 Doc:
-	make Drawio \
-		&& make DocExport
+	make DocExport \
+		&& make Drawio \
+		&& make Wavedrom \
+		&& cp -r -f $(CURR_DIR)/src/main/drawio/ $(CURR_DIR)/target/scala-2.12/api/ \
+		&& cp -r -f $(CURR_DIR)/src/main/wavedrom/ $(CURR_DIR)/target/scala-2.12/api/ \
+		&& find $(CURR_DIR)/src/main/drawio/ -type f -name "*.svg" -exec rm {} \; \
+		&& find $(CURR_DIR)/src/main/wavedrom/ -type f -name "*.svg" -exec rm {} \;
 DocExport:
 	$(SBT) doc
 DocOpen:

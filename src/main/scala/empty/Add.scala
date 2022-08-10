@@ -27,6 +27,7 @@ import chisel3.util._
  *  - outpus
  *    - io.Z
  *
+ * <img src="timing_diagram_foo.svg" />
  *
  */
 class ALU extends Module {
@@ -35,6 +36,7 @@ class ALU extends Module {
     val b = Input(UInt(8.W))
     val c = Output(UInt(8.W))
   })
+  
 
   val reg = RegInit(0.U(8.W))
   reg := io.a + io.b
@@ -46,3 +48,4 @@ object ALUMain extends App {
   println("Generating the adder hardware")
   emitVerilog(new ALU(), Array("--target-dir", "generated"))
 }
+
