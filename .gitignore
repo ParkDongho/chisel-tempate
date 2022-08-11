@@ -1,2 +1,5 @@
 *.class
 *.log
+/generated
+/project
+/target
