@@ -1,5 +1,5 @@
 *.class
 *.log
-/generated
-/project
-/target
+generated/
+project/
+target/
