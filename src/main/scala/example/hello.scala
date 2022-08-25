@@ -39,7 +39,8 @@ class Hello extends Module {
     blkReg := ~blkReg 
   }
   io.led := blkReg 
-}                                                                                       
+}
+
 object HelloMain extends App {
   emitVerilog(new Hello(), Array("--target-dir", "generated"))
 }
