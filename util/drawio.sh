@@ -1,4 +1,4 @@
-cd ../src/main/drawio
+cd ../src/main/resource/drawio
 ls
 for d in $(find "`pwd`" -type d)
 do

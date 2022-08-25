@@ -2,20 +2,20 @@
     "version": "1.4.0",
     "project": {
         "name": "chisel-template-test",
-        "directory": "/Users/parkdongho/Documents/dev/chisel-template",
-        "workspaceDir": "/Users/parkdongho/Documents/dev/chisel-template",
+        "directory": "/Users/parkdongho/dev/chisel/chisel-template",
+        "workspaceDir": "/Users/parkdongho/dev/chisel/chisel-template",
         "sources": [
-            "/Users/parkdongho/Documents/dev/chisel-template/src/test/scala",
-            "/Users/parkdongho/Documents/dev/chisel-template/src/test/scala-2.12",
-            "/Users/parkdongho/Documents/dev/chisel-template/src/test/scala-2",
-            "/Users/parkdongho/Documents/dev/chisel-template/src/test/java",
-            "/Users/parkdongho/Documents/dev/chisel-template/target/scala-2.12/src_managed/test"
+            "/Users/parkdongho/dev/chisel/chisel-template/src/test/scala",
+            "/Users/parkdongho/dev/chisel/chisel-template/src/test/scala-2.12",
+            "/Users/parkdongho/dev/chisel/chisel-template/src/test/scala-2",
+            "/Users/parkdongho/dev/chisel/chisel-template/src/test/java",
+            "/Users/parkdongho/dev/chisel/chisel-template/target/scala-2.12/src_managed/test"
         ],
         "dependencies": [
             "chisel-template"
         ],
         "classpath": [
-            "/Users/parkdongho/Documents/dev/chisel-template/.bloop/chisel-template/scala-2.12/classes",
+            "/Users/parkdongho/dev/chisel/chisel-template/.bloop/chisel-template/scala-2.12/classes",
             "/Users/parkdongho/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.13/scala-library-2.12.13.jar",
             "/Users/parkdongho/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/edu/berkeley/cs/chisel3_2.12/3.5.0/chisel3_2.12-3.5.0.jar",
             "/Users/parkdongho/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/edu/berkeley/cs/chiseltest_2.12/0.5.0/chiseltest_2.12-0.5.0.jar",
@@ -52,11 +52,11 @@
             "/Users/parkdongho/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.12/json4s-scalap_2.12-3.6.12.jar",
             "/Users/parkdongho/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar"
         ],
-        "out": "/Users/parkdongho/Documents/dev/chisel-template/.bloop/chisel-template",
-        "classesDir": "/Users/parkdongho/Documents/dev/chisel-template/.bloop/chisel-template/scala-2.12/test-classes",
+        "out": "/Users/parkdongho/dev/chisel/chisel-template/.bloop/chisel-template",
+        "classesDir": "/Users/parkdongho/dev/chisel/chisel-template/.bloop/chisel-template/scala-2.12/test-classes",
         "resources": [
-            "/Users/parkdongho/Documents/dev/chisel-template/src/test/resources",
-            "/Users/parkdongho/Documents/dev/chisel-template/target/scala-2.12/resource_managed/test"
+            "/Users/parkdongho/dev/chisel/chisel-template/src/test/resources",
+            "/Users/parkdongho/dev/chisel/chisel-template/target/scala-2.12/resource_managed/test"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -138,7 +138,7 @@
             "config": {
                 "home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre",
                 "options": [
-                    "-Duser.dir=/Users/parkdongho/Documents/dev/chisel-template"
+                    "-Duser.dir=/Users/parkdongho/dev/chisel/chisel-template"
                 ]
             },
             "mainClass": [
