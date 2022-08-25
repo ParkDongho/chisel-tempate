@@ -1,8 +1,8 @@
 SBT      = sbt
 SOURCE   = source
-OPEN     = open
-CURR_DIR = $(shell pwd)
+OPEN     = open CURR_DIR = $(shell pwd)
 UNAME    = $(shell uname)
+VIVADO   = vivado
 
 SSH_FILE    := ~/dev/chisel/setup/ssh.txt 
 PORT_FILE   := ~/dev/chisel/setup/port.txt
@@ -15,9 +15,9 @@ REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.s
 #######################
 # Generate Verilog Code
 run:
-	$(SBT) "runMain example.HelloMain" #\
-		&& scp -P ${REMOTE_PORT} ./generated/Hello.v \
-		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
+	$(SBT) "runMain example.HelloMain" 
+#		&& scp -P ${REMOTE_PORT} ./generated/Hello.v \
+#		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
 
 ##############
 # Run the test
@@ -76,6 +76,11 @@ docExport:
 	$(SBT) doc
 docOpen:
 	open ./target/scala-2.12/api/index.html
+
+#########
+# Vivado
+vivado:
+	$(VIVADO) ./xilinx/helloworld/helloworld.xpr
 
 help:
 	echo "HELP"
