@@ -80,7 +80,7 @@ docOpen:
 #########
 # Vivado
 vivado:
-	$(VIVADO) ./xilinx/helloworld/helloworld.xpr
+	cd ./util/fpga && ./vivado.sh -p "helloworld"
 
 help:
 	echo "HELP"
