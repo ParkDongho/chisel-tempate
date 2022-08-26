@@ -8,3 +8,5 @@ target/
 # chisel
 .metals/
 .bloop/
+
+xilinx/project/*

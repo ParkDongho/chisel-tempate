@@ -11,4 +11,12 @@ while getopts p: opts; do
   esac
 done
 
-vivado ../../xilinx/$PROJ_NAME/$PROJ_NAME.xpr
+#vivado ../../xilinx/$PROJ_NAME/$PROJ_NAME.xpr
+cd ../../xilinx/project
+vivado -source ../source/$PROJ_NAME.tcl
+vivado -mode tcl -source ../source/update_project.tcl ./$PROJ_NAME/$PROJ_NAME.xpr
+cd $CURR_DIR
+
+rm *jou
+rm *log
+rm *zip

@@ -40,6 +40,7 @@ clean:
 	rm -rf generated
 	rm -rf project
 	rm -rf target
+	rm -rf xilinx/project/*
 
 ########
 # Drawio
