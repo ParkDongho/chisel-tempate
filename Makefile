@@ -5,8 +5,7 @@ UNAME    = $(shell uname)
 VIVADO   = vivado
 
 SSH_FILE    := ~/dev/chisel/setup/ssh.txt 
-PORT_FILE   := ~/dev/chisel/setup/port.txt
-REMOTE_SSH  := $(shell cat ${SSH_FILE})
+PORT_FILE   := ~/dev/chisel/setup/port.txt REMOTE_SSH  := $(shell cat ${SSH_FILE})
 REMOTE_PORT := $(shell cat ${PORT_FILE})
 
 # 서버상의 Vivado 프로젝트의 verilog 파일이 저장되는 디렉토리를 설정
@@ -81,7 +80,10 @@ docOpen:
 #########
 # Vivado
 vivado:
-	cd ./util/fpga && ./vivado.sh -p "helloworld" &
+	if [ ! -d "./generated" ];then \
+		make run;                    \
+	fi                             \
+	&& cd ./util/fpga && ./vivado.sh -p "helloworld" &
 
 help:
 	echo "HELP"
