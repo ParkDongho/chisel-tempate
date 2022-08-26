@@ -81,7 +81,7 @@ docOpen:
 #########
 # Vivado
 vivado:
-	cd ./util/fpga && ./vivado.sh -p "helloworld"
+	cd ./util/fpga && ./vivado.sh -p "helloworld" &
 
 help:
 	echo "HELP"
