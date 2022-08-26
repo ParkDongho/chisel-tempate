@@ -1,6 +1,6 @@
 *.class
 *.log
-.metals/
+metals/
 generated/
 project/
 target/
