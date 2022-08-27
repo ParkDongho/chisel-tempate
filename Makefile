@@ -39,7 +39,7 @@ clean:
 	rm -rf generated
 	rm -rf project
 	rm -rf target
-	cd xilinx/project && rm -rf `ls *|grep -v project.md`
+	cd xilinx/project && rm -rf `ls |grep -v project.md`
 
 ########
 # Drawio
