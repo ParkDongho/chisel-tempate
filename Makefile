@@ -14,6 +14,7 @@ REMOTE_PROJ_DIR := ~/Documents/dev/NPUgen-chisel-project/NPUgen-chisel-project.s
 #######################
 # Generate Verilog Code
 run:
+	git pull
 	$(SBT) "runMain example.HelloMain" 
 #		&& scp -P ${REMOTE_PORT} ./generated/Hello.v \
 #		${REMOTE_SSH}:${REMOTE_PROJ_DIR}
@@ -21,21 +22,25 @@ run:
 ##############
 # Run the test
 test:
+	git pull
 	$(SBT) "testOnly HelloTest"
 
 ##################################
 # Draw Timing Diagram with GTKWave
 gtkwave:
+	git pull
 	$(OPEN) ./test_run_dir/Add_should_pass/*.vcd
 
 ####################
 # Draw Block Diagram
 diagrammer:
+	git pull
 	$(SOURCE) ./util/draw_diagrammer.sh -f "Hello"
 
 #########
 # Clean
 clean:
+	git pull
 	rm -rf generated
 	rm -rf project
 	rm -rf target
@@ -44,10 +49,12 @@ clean:
 ########
 # Drawio
 drawio:
+	git pull
 	cd util \
 		&& $(SOURCE) ./drawio.sh
 
 drawioNew:
+	git pull
 	@read -p "Enter File Name:" file_name; \
 	cp ./blank.drawio ./diagram/$$file_name.drawio \
 	&& open ./diagram/$$file_name.drawio
@@ -55,12 +62,14 @@ drawioNew:
 ########
 # Wavedrom
 wavedrom:
+	git pull
 	cd util \
 		&& $(SOURCE) ./wavedrom.sh
 
 ##########
 # ScalaDoc
 doc:
+	git pull
 	make docExport \
 		&& make drawio \
 		&& make wavedrom \
@@ -80,6 +89,7 @@ docOpen:
 #########
 # Vivado
 vivado:
+	git pull
 	if [ ! -d "./generated" ];then \
 		make run;                    \
 	fi                             \
