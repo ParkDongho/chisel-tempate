@@ -1,0 +1,5 @@
+package arithmetics
+
+object Subtract{
+
+}
