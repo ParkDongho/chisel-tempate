@@ -1,5 +1,0 @@
-package arithmetics
-
-object Subtract{
-
-}
