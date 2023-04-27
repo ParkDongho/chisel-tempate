@@ -10,14 +10,14 @@ test: ## run Treadle
 vivado: ## Open the Vivado
 	bash ./scripts/fpga/vivado_project.sh &
 
-clean:
+clean: ## delete generated files
 	sbt clean
 	rm *.fir *.sv *.v *.fir.mlir *.anno.json
 
-publish:
+publish: ## publish local
 	sbt PublishLocal
 
-scaladoc:
+scaladoc: ## build & service api document
 	sbt doc && \
 	  cd ./target/scala-2.13/api/ && \
 	  python3 -m "http.server 8080 &
