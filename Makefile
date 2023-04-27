@@ -16,3 +16,8 @@ clean:
 
 publish:
 	sbt PublishLocal
+
+scaladoc:
+	sbt doc && \
+	  cd ./target/scala-2.13/api/ && \
+	  python3 -m "http.server 8080 &
