@@ -21,3 +21,5 @@ scaladoc: ## build & service api document
 	sbt doc && \
 	  cd ./target/scala-2.13/api/ && \
 	  python3 -m "http.server 8080 &
+
+diagramer: ## build diagrammer
